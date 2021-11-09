@@ -1,1 +1,0 @@
-# adam-ghafara.github.io
