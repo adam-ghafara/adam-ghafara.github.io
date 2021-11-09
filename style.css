@@ -1,0 +1,79 @@
+/* +++++++++++++++++++
+ Posisi Deskripsi Diri 
+    +++++++++++++++++++ */
+
+.screen {
+    width: 1250px;
+    margin-left: 50px;
+    flex-wrap: wrap;
+}
+
+.header {
+    text-align: center;
+}
+
+.profile {
+    overflow: auto;
+    float: left;
+    width: 430px;
+    height: 900px;
+}
+
+.photo {
+    margin: auto;
+    text-align: center;
+}
+
+.bio {
+    overflow: auto;
+    float: right;
+    width: 700px;
+    height: 900px;
+    margin-left: 20px;
+}
+
+.narsis {
+    padding: 20px;
+    height: 800px;
+    width: 1205px;
+    float: left;
+}
+
+.header, .profile, .bio, .narsis{
+    margin-top: 20px;
+}
+
+.links {
+    margin-top: 20px;
+    float: left;
+    text-align: center;
+    height: 100px;
+    width: 1245px;
+}
+/* ++++++++++++++++++
+ Elemen percantik page
+    ++++++++++++++++++ */
+
+.screen {
+    background-color: rgb(179, 179, 179);
+}
+
+.header {
+    background-color: white;
+    border: solid;
+}
+
+.profile, .bio, .links, .narsis{
+    border: solid black;
+    background-color: white;
+    font-family: Tahoma;
+}
+
+.profile, .bio {
+    text-align: initial;
+    padding: 20px;
+}
+
+.photos, .photos2 {
+    text-align: center;
+}
