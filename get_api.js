@@ -4,33 +4,31 @@ myHeaders.append("Cookie", "connect.sid=s%3AMsnp_KW3uPWTf6gN4GDNl7XAoOShdRL2.VK0
 var requestOptions = {
     method: 'GET',
     redirect: 'follow'
-};  
+}; 
 
-hasil="";
-txt="";
-txt1="";
+hasil=""
+txt=""
+txt1=""
 
-fetch("https://xkcd.com/info.0.json", requestOptions)
+fetch("https://jsonplaceholder.typicode.com/todos", requestOptions)
   .then(response => response.text())
-  .then(result => console.log(result))
+  .then(result => show_result(result))
   .catch(error => console.log('error', error));
 
-function tampilkan(result){
+function show_result(result){
     console.log(result);
     hasil=JSON.parse(result);
     txt=hasil.forEach(isitabel);
 }
 
 function isitabel(value){
-  const mon = "Month: "
-  const yr = "Year: "
-  const tlt = "Title: "
-  const com = "Chat: "
-  const pag = "* * * * * * * * * * * *"
-    txt= txt+trnyatabel.replace("#TEXT#",mon+value.month + "");
-    txt= txt+trnyatabel.replace("#TEXT#",yr+value.year + "");
-    txt= txt+trnyatabel.replace("#TEXT#",tlt+value.safe_title + "");
-    txt= txt+trnyatabel.replace("#TEXT#",com+value.alt + "");
+  const id = "ID: "
+  const str = "TITLE: "
+  const cnt = "COMPLETED : "
+  const pag = "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+  txt= txt+trnyatabel.replace("#TEXT#",id+value.userId + "");
+    txt= txt+trnyatabel.replace("#TEXT#",str+value.title + "");
+    txt= txt+trnyatabel.replace("#TEXT#",cnt+value.completed + "");
     txt= txt+trnyatabel.replace("#TEXT#",pag);
   document.getElementById("konten").innerHTML=txt;
 }
