@@ -4,20 +4,6 @@
     {
       "type": "Feature",
       "properties": {
-        "no": 1,
-        "name": "Rumah Megah"
-      },
-      "geometry": {
-        "coordinates": [
-          107.59475701083522,
-          -6.993353882649487
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "no": 2,
         "name": "Komp. Graha Rancamanyar"
       },
