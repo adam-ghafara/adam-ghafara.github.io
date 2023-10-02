@@ -68,7 +68,7 @@ export function insertMarkerCOG(x,y){
           anchor: [0.5, 46],
           anchorXUnits: 'fraction',
           anchorYUnits: 'pixels',
-          src: 'img/icog.png',
+          src: '.../css/icons/marks.svg',
         }),
       })
     );
