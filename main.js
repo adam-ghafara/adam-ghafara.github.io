@@ -1,8 +1,7 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     const pointTable = document.getElementById("pointTable").getElementsByTagName('tbody')[0];
 
-    fetch("geodata/geopoint.json") // Ganti "data.json" dengan nama file JSON Anda
+    fetch("geodata/geopoint.json")
         .then(response => response.json())
         .then(data => {
             data.features.forEach(feature => {
@@ -24,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const pointTable = document.getElementById("territoryTable").getElementsByTagName('tbody')[0];
 
-    fetch("geodata/geoterritory.json") // Ganti "data.json" dengan nama file JSON Anda
+    fetch("geodata/geoterritory.json")
         .then(response => response.json())
         .then(data => {
             data.features.forEach(feature => {
@@ -46,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const pointTable = document.getElementById("lineTable").getElementsByTagName('tbody')[0];
 
-    fetch("geodata/geoline.json") // Ganti "data.json" dengan nama file JSON Anda
+    fetch("geodata/geoline.json")
         .then(response => response.json())
         .then(data => {
             data.features.forEach(feature => {
@@ -77,8 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
             zoom: 2
         })
     });
-
-    // Mendownload data waypoint, line string, dan polyline
     const waypointSource = new ol.source.Vector({
         url: 'geodata/geopoint.json',
         format: new ol.format.GeoJSON()
@@ -93,8 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         url: 'geodata/geoline.json',
         format: new ol.format.GeoJSON()
     });
-
-    // Membuat layer untuk waypoint, line string, dan polyline
     const waypointLayer = new ol.layer.Vector({
         source: waypointSource,
         style: new ol.style.Style({
