@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const pointTable = document.getElementById("pointTable").getElementsByTagName('tbody')[0];
 
-    fetch("geodata/geopoint.json")
+    fetch("./openlyr/geodata/geopoint.json")
         .then(response => response.json())
         .then(data => {
             data.features.forEach(feature => {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const pointTable = document.getElementById("territoryTable").getElementsByTagName('tbody')[0];
 
-    fetch("geodata/geoterritory.json")
+    fetch("./openlyr/geodata/geoterritory.json")
         .then(response => response.json())
         .then(data => {
             data.features.forEach(feature => {
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const pointTable = document.getElementById("lineTable").getElementsByTagName('tbody')[0];
 
-    fetch("geodata/geoline.json")
+    fetch("./openlyr/geodata/geoline.json")
         .then(response => response.json())
         .then(data => {
             data.features.forEach(feature => {
@@ -77,17 +77,17 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     });
     const waypointSource = new ol.source.Vector({
-        url: 'geodata/geopoint.json',
+        url: './openlyr/geodata/geopoint.json',
         format: new ol.format.GeoJSON()
     });
 
     const lineStringSource = new ol.source.Vector({
-        url: 'geodata/geoterritory.json',
+        url: './openlyr/geodata/geoterritory.json',
         format: new ol.format.GeoJSON()
     });
 
     const polylineSource = new ol.source.Vector({
-        url: 'geodata/geoline.json',
+        url: './openlyr/geodata/geoline.json',
         format: new ol.format.GeoJSON()
     });
     const waypointLayer = new ol.layer.Vector({

@@ -1,4 +1,3 @@
-// Fungsi untuk mengambil data dari API
 async function ambilDataDariAPI() {
     try {
         const response = await fetch('https://us-central1-gis-tester-401506.cloudfunctions.net/let-load');
