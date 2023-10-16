@@ -80,7 +80,7 @@ export function AddLayerToMAP(geojson){
         source: Sourcedata,
         style: new ol.style.Style({
             image: new ol.style.Icon({
-                src: 'img/icog.png', 
+                src: './img/icog.png', 
                 scale: 0.5, 
                 opacity: 1
             })
